@@ -1,4 +1,4 @@
-import { SpinLoader } from "../components/Header/SpinLoader";
+import { SpinLoader } from "../components/SpinLoader";
 
 export default async function LoadingRoot() {
   return <SpinLoader className="min-h-screen" />;
