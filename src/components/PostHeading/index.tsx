@@ -9,16 +9,18 @@ type PostHeadingProps = {
 export function PostHeading({ title, url, as: Tag = "h2" }: PostHeadingProps) {
   const headingClassesMap = {
     h1: "text-4xl/tight font-extrabold sm:text-4xl",
-    h2: "text-3xl/tight font-extrabold sm:text-4xl",
-    h3: "text-2xl/tight  font-extrabold sm:text-3xl",
-    h4: "text-xl/tight  font-extrabold sm:text-2xl",
-    h5: "text-lg/tight  font-extrabold sm:text-xl",
-    h6: "text-base/tight font-extrabold sm:text-lg",
+    h2: "text-3xl/tight font-bold sm:text-4xl",
+    h3: "text-2xl/tight  font-bold sm:text-3xl",
+    h4: "text-xl/tight  font-bold sm:text-2xl",
+    h5: "text-lg/tight  font-bold sm:text-xl",
+    h6: "text-base/tight font-bold sm:text-lg",
   };
 
   return (
     <Tag className={headingClassesMap[Tag]}>
-      <Link href={url}>{title}</Link>
+      <Link className="hover:text-slate-600 transition" href={url}>
+        {title}
+      </Link>
     </Tag>
   );
 }
